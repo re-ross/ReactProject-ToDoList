@@ -39,10 +39,10 @@ function App() {
   const filterHandler = () => {
     switch (status) {
       case "completed":
-        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        setFilteredTodos(todos.filter((todo) => todo.completed));
         break;
       case "uncompleted":
-        setFilteredTodos(todos.filter((todo) => todo.uncompleted === true));
+        setFilteredTodos(todos.filter((todo) => todo.completed));
         break;
       default:
         setFilteredTodos(todos);
@@ -60,12 +60,12 @@ function App() {
         setTodos={setTodos}
         setInputText={setInputText}
         setStatus={setStatus}
+        filteredTodos={filteredTodos}
       />
       <TodoList
-        filteredTodos={filteredTodos}
         setTodos={setTodos}
-        text={todos}
         todos={todos}
+        filteredTodos={filteredTodos}
       />
     </div>
   );
