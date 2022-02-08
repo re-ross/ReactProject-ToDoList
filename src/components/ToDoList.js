@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"; // timestamp 1:16:27
 //import components
 import Todo from "./Todo";
-const TodoList = ({ todos, setTodos, filteredTodos }) => {
+const TodoList = ({ todos, setTodos, filteredTodos, todo }) => {
   return (
     <div className="todo-container">
       <ul className="todo-list">
